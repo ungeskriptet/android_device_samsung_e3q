@@ -45,9 +45,8 @@ vendor	/vendor	erofs	ro	wait,avb,logical,first_stage_mount
 /dev/block/bootdevice/by-name/userdata	/data	f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	wait,encryptable=footer,length=-16384,fscompress
 /dev/block/bootdevice/by-name/cache       /cache          ext4        defaults                  recoveryonly
 /dev/block/mmcblk0p1                      /sdcard         sdfat       defaults                  recoveryonly
-/dev/block/bootdevice/by-name/sec_efs     /efs            ext4        defaults                  recoveryonly
+/dev/block/bootdevice/by-name/efs         /efs            ext4        defaults                  recoveryonly
 /dev/block/bootdevice/by-name/sec_efs     /sec_efs        ext4        defaults                  recoveryonly
-/dev/block/bootdevice/by-name/carrier     /carrier        ext4        defaults                  recoveryonly
 
 # FOTA
 /dev/block/bootdevice/by-name/apnhlos     /modem          emmc        defaults                  recoveryonly
@@ -71,8 +70,6 @@ odm	/odm	erofs	ro	wait,avb,logical,first_stage_mount
 /dev/block/bootdevice/by-name/vendor_boot	/vendor_boot	emmc	default	recoveryonly
 /dev/block/bootdevice/by-name/vbmeta_samsung	/vbmeta_samsung	emmc	default	recoveryonly
 
-
-
 #Auto-generated code by FOTA Build Portal
 /dev/block/bootdevice/by-name/imagefv	/imagefv	emmc	default	recoveryonly
 /dev/block/bootdevice/by-name/init_boot	/init_boot	emmc	default	recoveryonly
@@ -81,9 +78,6 @@ vendor_dlkm	/vendor_dlkm	erofs	ro	wait,avb=vbmeta,logical,first_stage_mount
 system_dlkm	/system_dlkm	erofs	ro	wait,avb,logical,first_stage_mount
 system_dlkm	/system_dlkm	f2fs	ro	wait,avb,logical,first_stage_mount
 system_dlkm	/system_dlkm	ext4	ro	wait,avb,logical,first_stage_mount
-
-
-
 
 #Auto-generated code by FOTA Build Portal
 /dev/block/bootdevice/by-name/vm-bootsys	/vm-bootsys	ext4	default	recoveryonly
